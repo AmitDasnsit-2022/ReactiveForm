@@ -1,0 +1,46 @@
+
+<!-- <h3>There are two types of forms:Template driven and reactive</h3> -->
+<!-- Template Driven Form -->
+<!-- <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+  <input type="text" placeholder="Enter name" name="name" [(ngModel)]="name" >
+  <input type="password" placeholder="Enter your password" name="password" [(ngModel)]="password" >
+  <button class="btn btn-primary"> Login </button> -->
+<!-- </form> -->
+<!-- <button (click)=userLogin(loginForm.value)>Outside Login</button> -->
+
+
+<!-- Reactive Form -->
+<!-- <form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+  <input type="text" placeholder="Enter name" name="user" formControlName="user" >
+  <span class="ide" *ngIf="user && user.invalid && user.touched">Invalid User</span>
+  <br><br>
+  <input class="nextline" type="password" placeholder="Enter your password" name="password" formControlName="password">
+  <span style="color: red;"*ngIf="password && password.invalid && password.touched">Invalid Password</span>
+  <br><br>
+  <button class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+
+</form> -->
+<form [formGroup]="checkBox" (ngSubmit)="clickCheckbox()">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="Event1" formControlName="Event1">
+  <label class="form-check-label" for="flexCheckDefault">
+    Event 1
+  </label>
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="Event2" formControlName="Event2" >
+  <label class="form-check-label" for="flexCheckChecked">
+    Event 2
+  </label>
+<!-- <div class="form-check"> -->
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="Event3" formControlName="Event3" >
+  <label class="form-check-label" for="flexCheckChecked">
+    Event 3
+  </label>
+<!-- </div> -->
+<!-- <div class="form-check"> -->
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="Event4" formControlName="Event4" >
+  <label class="form-check-label" for="flexCheckChecked">
+    Event 4
+  </label>
+<!-- </div> -->
+</form>
+
+
